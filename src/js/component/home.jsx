@@ -1,26 +1,49 @@
 import React from "react";
+import { Link } from "react-router-dom/dist";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+function Home(){
+    return (
+        <div className="container">
+            
+            <div className="col">
+                <h1>
+                    Welcome to my SPA
+                </h1>
+            </div>
+            
+            <div className="row">
+                <div className="row">
+                    <div className="col d-flex justify-content-around">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Armadillo_Mexicano_-_Patricia_Ventura_Parra.jpg"
+                            className="img-thumbnail rounded-circle small-img"
+                        />
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Aphrissa_neleis_%28female%29.jpg"
+                            className="img-thumbnail rounded-circle small-img"
+                        />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/4/42/Arteria_saludable_-_Mora_Manuela_Vieytes.jpg"
+                            className="img-thumbnail rounded-circle small-img"
+                        />
+                    </div>
+                </div>
+            </div>
 
-//create your first component
-const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
-};
+            <div className="row">
+                <div className="col m-2">
+                    <button type="button" class="btn btn-light">
+                        <Link to="/login">Iniciar Sesion</Link>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    );
+}
 
 export default Home;
